@@ -8,18 +8,23 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-// function reverseInt(n) {
-//   const nToStr = n.toString()
-//   for (let i = 0; i < nToStr.length; i++) {
-
-//   }
-// }
+// Option 2: NOTE: parseInt(num) returns a parse int up to the first non numeric character (assuming base 10)
+// Using Number(num) or +num assumes base10 and will return NaN if
+  // E.g, 
+    // parseInt('123ab') // 123
+    // parseInt('5-') // 5 
+function reverseInt(n) {
+  const reversed = n.toString().split('').reverse().join('')
+  return parseInt(reversed) * Math.sign(n)
+}
 
 module.exports = reverseInt;
 
-// Option 1
-function reverseInt(n) {
-  return Math.sign(n) > -1
-  ? parseInt(n.toString().split('').reverse().join(''))
-  : parseInt(n.toString().slice(1).split('').reverse().join('')) * - 1
-}
+// Option 1 
+// function reverseInt(n) {
+//   return Math.sign(n) > -1
+//   ? parseInt(n.toString().split('').reverse().join(''))
+//   : parseInt(n.toString().slice(1).split('').reverse().join('')) * - 1
+// }
+
+
