@@ -8,6 +8,7 @@
 function maxChar(str) {
   const chars = new Map()
   let mostOccurences = [null, null]
+  
 
   for(let char of str) {
     chars.get(char) ? chars.set(char, chars.get(char) + 1) : chars.set(char, 1)
@@ -17,8 +18,6 @@ function maxChar(str) {
   }
 
   return mostOccurences[0]
-
-
 }
 
 module.exports = maxChar;
