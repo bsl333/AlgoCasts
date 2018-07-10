@@ -19,7 +19,8 @@ module.exports = reverse;
 // }
 
 
-// Option 2
+
+// Option 2: Big O: O(n)
 // function reverse(str) {
 //   let reversed = ''
 //   for (let char of str) {

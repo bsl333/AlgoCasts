@@ -45,7 +45,7 @@ module.exports = steps;
 // }
 
 
-// Option 1
+// Option 1: Big O: O(n^2)
 // function steps(n) {
 //   for (let i = 0; i < n; i++) {
 //     let line = ''
